@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
+
+body{
+    margin: 0;
+    background-color: brown;
+}
+/* Here are variables, it's just to avoid write the same code every time */
+:root{
+    --border-radius: 15px;
+    --main-color: rgb(8, 8, 8);
+    --secundary-color:rgb(37, 34, 34);
+}
+
+/* Header with a Sticky position, it makes him stays stuck to the top of the page*/
+header{
+    position: sticky;
+    top: 0;
+}
+#div-header{
+    display: flex;
+    justify-content: space-between;
+    max-height: 100px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 0 10px;
+    font-family: "Eater", serif;
+}
+
+#header-left{
+    display: flex;
+}
+
+nav{
+    max-height: 100%;
+    align-content: center;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+section{
+    padding: 15px;
+}
+
+main{
+    background-image: url("../img/img-5.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    height: 500px;
+    border: 2px solid;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#hero-content{
+    font-size: x-large;
+    text-align: center;
+    padding-top: 300px;
+}
+
+button{
+    font-size:large;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border-color: red;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+button:hover{
+    transform: scale(1.04);
+}
+
+
+button:active{
+    transform: scale(0.97);
+}
+
+.events{
+    align-items: center;
+    background-color: var(--secundary-color);
+    color: white;
+    
+}
+
+.events ul{
+    background-color: rgba(255, 0, 0, 0.726);
+}
+
+.events ol{
+    background-color: rgba(0, 128, 0, 0.822);
+}
+#main-div-events{
+    display: flex;
+    justify-content: space-around;
+}
+
+.title{
+    text-align: center;
+    font-size: 30px;
+}
+
+.about{
+    background-color: rgb(37, 34, 34);
+    color: white;
+}
+
+.main-div-about{
+    display: flex;   
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#about-left{
+    width: 600px;
+}
+
+#about-left img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+#about-right{
+    width: 500px;
+}
+
+#about-right ul{
+    list-style-type: none;
+    padding: 0;
+}
+h3{
+    color: brown;
+}
+
+
+.multimedia{
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+}
+
+#main-div-multimedia{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    padding: 0 450px;
+}
+
+.multimedia div{
+    width: 300px;
+}
+
+.multimedia div img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    transition: 0.2s;
+}
+
+.multimedia div img:hover{
+    transform: translateY(-6px);
+}
+
+.contact h3{
+    margin: 2px;
+}
+.contact{
+    margin-top: 5px;
+    color: white;
+    background-color: var(--main-color);
+}
+
+.contact ul{
+    padding: 0;
+}
+
+#main-div-footer{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+
+/* This is for mobile devices, when you open the page in  a mobile it adapts to him */
+@media (max-width:768px){
+    #main-div-multimedia{
+        grid-template-columns: repeat(2,1fr);
+        padding: 0 50px;
+    }
+}
